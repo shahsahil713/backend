@@ -1,3 +1,4 @@
+import { ErrorMdController } from "./controllers/errormd/errormd.controller";
 import { Router } from "express";
 import { AuthController } from "./controllers/auth/auth.controller";
 import { UserController } from "./controllers/user/user.controller";
@@ -18,6 +19,10 @@ const routes = [
   {
     path: "/profession",
     route: new ProfessionController().router,
+  },
+  {
+    path: "/api/error-md",
+    route: new ErrorMdController().router,
   },
   {
     path: "/speciality",
