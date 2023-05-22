@@ -1,14 +1,14 @@
 import { Schema, model } from "mongoose";
 import toJSON from "./plugins/toJSON.plugin";
 
-export interface ErrorMd {
+export interface DevError {
   id?: Schema.Types.ObjectId;
   owner: Schema.Types.ObjectId;
   title: string;
   description: string;
 }
 
-export const schema = new Schema<ErrorMd>(
+export const schema = new Schema<DevError>(
   {
     owner: {
       type: Schema.Types.ObjectId,
@@ -30,4 +30,4 @@ export const schema = new Schema<ErrorMd>(
 
 schema.plugin(toJSON);
 
-export const ErrorMd = model<ErrorMd>("ErrorMd", schema);
+export const DevError = model<DevError>("DevError", schema);

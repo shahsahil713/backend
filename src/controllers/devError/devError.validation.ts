@@ -3,8 +3,8 @@ import { Request, Response, NextFunction } from "express";
 import { ApiError } from "../../utils/ApiError";
 import httpStatus from "http-status";
 
-export class ErrorMdValidation {
-  public createErrorMd = (
+export class DevErrorValidation {
+  public createDevError = (
     request: Request,
     response: Response,
     next: NextFunction
@@ -25,7 +25,7 @@ export class ErrorMdValidation {
     next();
   };
 
-  public updateErrorMd = (
+  public updateDevError = (
     request: Request,
     response: Response,
     next: NextFunction
