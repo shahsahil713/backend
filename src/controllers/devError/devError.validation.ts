@@ -12,6 +12,7 @@ export class DevErrorValidation {
     const schema: ObjectSchema = Joi.object().keys({
       title: Joi.string(),
       description: Joi.string(),
+      category: Joi.string(),
     });
 
     const result = schema.validate(request.body);
@@ -33,6 +34,7 @@ export class DevErrorValidation {
     const schema: ObjectSchema = Joi.object().keys({
       title: Joi.string(),
       description: Joi.string(),
+      category: Joi.string(),
     });
 
     const result = schema.validate(request.body);

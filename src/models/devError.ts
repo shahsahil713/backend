@@ -6,6 +6,7 @@ export interface DevError {
   owner: Schema.Types.ObjectId;
   title: string;
   description: string;
+  category:string;
 }
 
 export const schema = new Schema<DevError>(
@@ -20,6 +21,11 @@ export const schema = new Schema<DevError>(
       trim: true,
     },
     description: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    category: {
       type: String,
       required: true,
       trim: true,
